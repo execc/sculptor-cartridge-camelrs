@@ -40,3 +40,23 @@ Copy web_example.xml to src/main/webapp/WEB-INF/web.xml and edit it to fine tune
 
 *generate.web.example* - controls generation of web_example.xml file.
 By default set to 'true'. Set it to false to disable web_example.xml generation.
+
+# sculptor-maven-jee7-archetype
+Archetype for generating JavaEE 7 applications with Sculptor.
+
+Installation:
+In sculptor-maven-jee7-archetype directory run
+```mvn install archetype:update-local-catalog```
+Then you can generate the project with
+```
+	mvn archetype:generate									\
+		-DarchetypeGroupId=org.sculptorgenerator			\
+		-DarchetypeArtifactId=sculptor-maven-jee7-archetype	\
+		-DarchetypeVersion=1.0-SNAPSHOT						\
+		-DgroupId=<my.groupid>								\
+		-DartifactId=<my-artifactId>						\
+		-Dcamel=<true/false>								\
+```
+
+Parameters:
+*camel* - true by default. When true includes camel dependencies in generated pom.xml

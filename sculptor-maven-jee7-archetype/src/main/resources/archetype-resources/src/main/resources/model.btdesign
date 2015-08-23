@@ -1,0 +1,8 @@
+Application MyApp {
+    basePackage=${groupId}
+
+    Module mymodule {
+
+	}
+
+}
